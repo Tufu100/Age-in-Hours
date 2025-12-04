@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Hours Calculator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Work Hours Calculator</h1>
+    <p class="subtitle">Calculate how many hours you've worked!</p>
+
+    <div class="input-section">
+      <div class="input-group">
+        <label for="years">Years Worked</label>
+        <input type="number" id="years" min="0" step="0.1" placeholder="e.g., 5.5" required>
+      </div>
+
+      <div class="input-group">
+        <label for="hoursPerWeek">Hours Per Week</label>
+        <input type="number" id="hoursPerWeek" min="0" max="168" value="40" placeholder="e.g., 40" required>
+      </div>
+
+      <div class="input-group">
+        <label for="weeksPerYear">Weeks Per Year</label>
+        <input type="number" id="weeksPerYear" min="0" max="52" value="52" placeholder="e.g., 52" required>
+        <small class="hint">Standard is 52, or 50 if accounting for 2 weeks vacation</small>
+      </div>
+
+      <button id="calculateWorkBtn" class="calculate-btn">Calculate Work Hours</button>
+    </div>
+
+    <div id="workResult" class="result hidden">
+      <h2>You have worked:</h2>
+      <div class="hours-display">
+        <span id="totalWorkHours">0</span>
+        <span class="label">hours</span>
+      </div>
+      <div class="additional-info">
+        <p>That's <span id="workDays">0</span> days worth of work!</p>
+        <p>Or <span id="workWeeks">0</span> weeks of continuous work!</p>
+        <p>Or <span id="workMonths">0</span> months of 24/7 work!</p>
+        <p class="timestamp">Calculated at: <span id="workTimestamp"></span></p>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <a href="/index.html" class="nav-link">Back to Age Calculator</a>
+    </div>
+  </div>
+
+  <script type="module" src="/work-hours.js"></script>
+</body>
+</html>

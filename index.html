@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age in Hours Calculator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Age in Hours Calculator</h1>
+    <p class="subtitle">Find out how many hours you've been alive!</p>
+
+    <div class="input-section">
+      <div class="input-group">
+        <label for="birthdate">Date of Birth</label>
+        <input type="date" id="birthdate" required>
+      </div>
+
+      <div class="input-group">
+        <label for="birthtime">Time of Birth</label>
+        <input type="time" id="birthtime" required>
+      </div>
+
+      <button id="calculateBtn" class="calculate-btn">Calculate Hours</button>
+    </div>
+
+    <div id="result" class="result hidden">
+      <h2>You have been alive for:</h2>
+      <div class="hours-display">
+        <span id="hoursValue">0</span>
+        <span class="label">hours</span>
+      </div>
+      <div class="additional-info">
+        <p>That's <span id="days">0</span> days and <span id="remainingHours">0</span> hours!</p>
+        <p class="timestamp">Calculated at: <span id="timestamp"></span></p>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <a href="/work-hours.html" class="nav-link">Calculate Work Hours</a>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
